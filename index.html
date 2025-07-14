@@ -5,71 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luckyman9299's Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background-color: #f7f9fb;
-      color: #333;
+      background-color: #0f1117;
+      color: #d1e8ff;
     }
-    header {
-      background-color: #ffffff;
-      padding: 40px 20px 20px;
+
+    .hero {
+      background: radial-gradient(circle at center, #1c1f2b 0%, #0f1117 100%);
+      color: #72d0ff;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 100px 20px 80px;
     }
-    header h1 {
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #3fd0ff;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #a4dfff;
+      max-width: 700px;
+      margin: auto;
+    }
+    .scroll-button {
+      margin-top: 35px;
+      padding: 14px 30px;
+      font-size: 1rem;
+      background-color: transparent;
+      color: #3fd0ff;
+      border: 2px solid #3fd0ff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-shadow: 0 0 5px #3fd0ff;
+    }
+    .scroll-button:hover {
+      background-color: #3fd0ff10;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #3fd0ff, 0 0 20px #3fd0ff40;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+    header h2 {
+      font-size: 2rem;
+      text-shadow: 0 0 8px #3fd0ff;
       margin-bottom: 10px;
     }
     header p {
-      color: #666;
       max-width: 700px;
       margin: 0 auto;
-      font-size: 1rem;
+      color: #b6dfff;
     }
+
     section {
       padding: 40px 20px;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
     }
+    h2, h3 {
+      text-align: center;
+      text-shadow: 0 0 5px #3fd0ff;
+    }
     h2 {
-      margin-top: 0;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+      border-bottom: 2px solid #3fd0ff30;
+      padding-bottom: 10px;
     }
     h3 {
-      margin: 30px 0 10px;
-      color: #444;
+      margin: 40px 0 15px;
+      font-size: 1.5rem;
     }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin-top: 20px;
     }
     .gallery img {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      max-width: 320px;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      box-shadow: 0 0 20px rgba(63, 208, 255, 0.15);
+      transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
     }
     .gallery img:hover {
       transform: scale(1.03);
+      border-color: #3fd0ff;
+      box-shadow: 0 0 15px #3fd0ff, 0 0 30px #3fd0ff30;
     }
+
     footer {
       text-align: center;
-      padding: 20px;
-      color: #888;
+      padding: 30px;
+      color: #5da9d4;
       font-size: 0.9rem;
+      border-top: 1px solid #3fd0ff30;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Luckyman9299's Portfolio</h1>
-    <p>Hi, I'm luckyman9299. I make Roblox maps ranging from low poly art to creative minigame maps. Explore my work below!</p>
+  <!-- Homescreen / Hero -->
+  <div class="hero">
+    <h1>Luckyman9299</h1>
+    <p>I build stylized Roblox maps – from clean low poly art to intense mini map environments. Let’s dive in.</p>
+    <button class="scroll-button" onclick="document.getElementById('portfolio').scrollIntoView()">View Portfolio</button>
+  </div>
+
+  <!-- Section Description -->
+  <header id="portfolio">
+    <h2>My Portfolio</h2>
+    <p>Here’s a showcase of my map design work across different styles and themes.</p>
   </header>
 
+  <!-- Portfolio Content -->
   <section>
     <h2>Low Poly</h2>
     <div class="gallery">
@@ -82,40 +143,40 @@
 
     <h3>Arcade</h3>
     <div class="gallery">
-      <img src="Arcade1.png" alt="Arcade Map 1" />
-      <img src="Arcade2.png" alt="Arcade Map 2" />
-      <img src="Arcade3.png" alt="Arcade Map 3" />
-      <img src="Arcade4.png" alt="Arcade Map 4" />
-      <img src="Arcade5.png" alt="Arcade Map 5" />
-      <img src="Arcade6.png" alt="Arcade Map 6" />
-      <img src="Arcade7.png" alt="Arcade Map 7" />
-      <img src="Arcade8.png" alt="Arcade Map 8" />
-      <img src="Arcade9.png" alt="Arcade Map 9" />
+      <img src="Arcade1.png" alt="Arcade 1" />
+      <img src="Arcade2.png" alt="Arcade 2" />
+      <img src="Arcade3.png" alt="Arcade 3" />
+      <img src="Arcade4.png" alt="Arcade 4" />
+      <img src="Arcade5.png" alt="Arcade 5" />
+      <img src="Arcade6.png" alt="Arcade 6" />
+      <img src="Arcade7.png" alt="Arcade 7" />
+      <img src="Arcade8.png" alt="Arcade 8" />
+      <img src="Arcade9.png" alt="Arcade 9" />
     </div>
 
     <h3>Office</h3>
     <div class="gallery">
-      <img src="Office1.png" alt="Office Map 1" />
-      <img src="Office2.png" alt="Office Map 2" />
-      <img src="Office3.png" alt="Office Map 3" />
-      <img src="Office4.png" alt="Office Map 4" />
-      <img src="Office5.png" alt="Office Map 5" />
-      <img src="Office6.png" alt="Office Map 6" />
-      <img src="Office7.png" alt="Office Map 7" />
+      <img src="Office1.png" alt="Office 1" />
+      <img src="Office2.png" alt="Office 2" />
+      <img src="Office3.png" alt="Office 3" />
+      <img src="Office4.png" alt="Office 4" />
+      <img src="Office5.png" alt="Office 5" />
+      <img src="Office6.png" alt="Office 6" />
+      <img src="Office7.png" alt="Office 7" />
     </div>
 
     <h3>Village</h3>
     <div class="gallery">
-      <img src="GreenMap1.png" alt="Village Map 1" />
-      <img src="GreenMap2.png" alt="Village Map 2" />
-      <img src="GreenMap3.png" alt="Village Map 3" />
-      <img src="GreenMap4.png" alt="Village Map 4" />
-      <img src="GreenMap5.png" alt="Village Map 5" />
+      <img src="GreenMap1.png" alt="Village 1" />
+      <img src="GreenMap2.png" alt="Village 2" />
+      <img src="GreenMap3.png" alt="Village 3" />
+      <img src="GreenMap4.png" alt="Village 4" />
+      <img src="GreenMap5.png" alt="Village 5" />
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Luckyman9299. All rights reserved.
+    &copy; 2025 Luckyman9299. Portfolio powered by GitHub Pages.
   </footer>
 
 </body>
