@@ -70,27 +70,45 @@
       border-radius: 6px;
       border: none;
       outline: none;
-      box-shadow: 0 0 5px #3fd0ff;
+      box-shadow: none;
     }
     .section {
       padding: 20px 0;
       text-align: center;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease-in-out;
     }
     .section h3 {
       font-size: 1.5rem;
       margin-bottom: 10px;
       cursor: pointer;
-      text-shadow: 0 0 5px #3fd0ff;
+      background-color: #122130;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid #3fd0ff;
+      color: #3fd0ff;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 10px rgba(63, 208, 255, 0.3);
+    }
+    .section h3:hover {
+      background-color: #1c2f47;
+      transform: scale(1.05);
     }
     .gallery {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       justify-items: center;
-      margin-top: 20px;
+      margin-top: 0;
       padding: 0 20px;
-      transition: max-height 0.4s ease;
+      transition: max-height 0.6s ease-in-out, padding 0.3s ease;
+    }
+    .gallery.open {
+      max-height: 2000px;
+      margin-top: 20px;
+      padding-top: 20px;
     }
     .gallery img {
       width: 100%;
@@ -211,7 +229,7 @@
   <script>
     function toggleSection(id) {
       const section = document.getElementById(id);
-      section.style.display = section.style.display === 'grid' ? 'none' : 'grid';
+      section.classList.toggle("open");
     }
 
     function openLightbox(src) {
