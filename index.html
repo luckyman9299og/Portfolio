@@ -19,7 +19,7 @@
       background: radial-gradient(circle at center, #1c1f2b 0%, #0f1117 100%);
       color: #72d0ff;
       text-align: center;
-      padding: 100px 20px 60px;
+      padding: 100px 20px 80px;
     }
     .hero h1 {
       font-size: 3.5rem;
@@ -32,10 +32,8 @@
       max-width: 700px;
       margin: auto;
     }
-    .roblox-img-wrapper {
-      margin-top: 30px;
-    }
     .roblox-img {
+      margin-top: 30px;
       width: 140px;
       height: 140px;
       border-radius: 50%;
@@ -170,12 +168,11 @@
     <h1>Hi I Build Stuff</h1>
     <p>From Obbies, to models, studs, low poly, MM2 style buildings, and etc.<br>
     My main account is <strong>luckyman9299</strong>, but I work on my alt, <strong>luckydude9299</strong>.</p>
-    
-    <div class="roblox-img-wrapper">
-      <a href="https://www.roblox.com/users/1098190644/profile" target="_blank">
-        <img src="MYRBLXACC.JPG" alt="My Roblox Account" class="roblox-img">
-      </a>
-    </div>
+
+    <!-- Roblox Image -->
+    <a href="https://www.roblox.com/users/1098190644/profile" target="_blank">
+      <img src="MYRBLXACC.JPG" alt="My Roblox Account" class="roblox-img">
+    </a>
 
     <button class="scroll-button" onclick="document.getElementById('portfolio').scrollIntoView()">View Portfolio</button>
   </div>
@@ -185,8 +182,51 @@
     <p>Click a section below to expand and view the builds.</p>
   </header>
 
-  <!-- Your sections like Low Poly, Arcade, etc remain unchanged -->
-  <!-- Continue from here with your existing section HTML... -->
+  <div class="section">
+    <h3 onclick="toggleSection('lowpoly')">Low Poly</h3>
+    <div class="gallery" id="lowpoly">
+      <img src="House.png" alt="House" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection('arcade')">Arcade</h3>
+    <div class="gallery" id="arcade">
+      <img src="Arcade1.png" alt="Arcade1" onclick="openLightbox(this.src)">
+      <img src="Arcade2.png" alt="Arcade2" onclick="openLightbox(this.src)">
+      <img src="Arcade3.png" alt="Arcade3" onclick="openLightbox(this.src)">
+      <img src="Arcade4.png" alt="Arcade4" onclick="openLightbox(this.src)">
+      <img src="Arcade5.png" alt="Arcade5" onclick="openLightbox(this.src)">
+      <img src="Arcade6.png" alt="Arcade6" onclick="openLightbox(this.src)">
+      <img src="Arcade7.png" alt="Arcade7" onclick="openLightbox(this.src)">
+      <img src="Arcade8.png" alt="Arcade8" onclick="openLightbox(this.src)">
+      <img src="Arcade9.png" alt="Arcade9" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection('office')">Office</h3>
+    <div class="gallery" id="office">
+      <img src="Office1.png" alt="Office1" onclick="openLightbox(this.src)">
+      <img src="Office2.png" alt="Office2" onclick="openLightbox(this.src)">
+      <img src="Office3.png" alt="Office3" onclick="openLightbox(this.src)">
+      <img src="Office4.png" alt="Office4" onclick="openLightbox(this.src)">
+      <img src="Office5.png" alt="Office5" onclick="openLightbox(this.src)">
+      <img src="Office6.png" alt="Office6" onclick="openLightbox(this.src)">
+      <img src="Office7.png" alt="Office7" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection('village')">Village</h3>
+    <div class="gallery" id="village">
+      <img src="GreenMap1.png" alt="Village1" onclick="openLightbox(this.src)">
+      <img src="GreenMap2.png" alt="Village2" onclick="openLightbox(this.src)">
+      <img src="GreenMap3.png" alt="Village3" onclick="openLightbox(this.src)">
+      <img src="GreenMap4.png" alt="Village4" onclick="openLightbox(this.src)">
+      <img src="GreenMap5.png" alt="Village5" onclick="openLightbox(this.src)">
+    </div>
+  </div>
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <span class="close" onclick="closeLightbox()">&times;</span>
