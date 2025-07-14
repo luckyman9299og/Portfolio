@@ -75,6 +75,7 @@
     .section {
       padding: 20px 0;
       text-align: center;
+      transition: all 0.3s ease;
     }
     .section h3 {
       font-size: 1.5rem;
@@ -89,6 +90,7 @@
       justify-items: center;
       margin-top: 20px;
       padding: 0 20px;
+      transition: max-height 0.4s ease;
     }
     .gallery img {
       width: 100%;
@@ -110,6 +112,7 @@
       width: 100%;
       height: 100%;
       background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(5px);
       justify-content: center;
       align-items: center;
       z-index: 1000;
@@ -162,11 +165,39 @@
     <div class="gallery" id="arcade">
       <img src="Arcade1.png" alt="Arcade1" onclick="openLightbox(this.src)">
       <img src="Arcade2.png" alt="Arcade2" onclick="openLightbox(this.src)">
-      <!-- Add the rest here -->
+      <img src="Arcade3.png" alt="Arcade3" onclick="openLightbox(this.src)">
+      <img src="Arcade4.png" alt="Arcade4" onclick="openLightbox(this.src)">
+      <img src="Arcade5.png" alt="Arcade5" onclick="openLightbox(this.src)">
+      <img src="Arcade6.png" alt="Arcade6" onclick="openLightbox(this.src)">
+      <img src="Arcade7.png" alt="Arcade7" onclick="openLightbox(this.src)">
+      <img src="Arcade8.png" alt="Arcade8" onclick="openLightbox(this.src)">
+      <img src="Arcade9.png" alt="Arcade9" onclick="openLightbox(this.src)">
     </div>
   </div>
 
-  <!-- Repeat sections for Office and Village as needed -->
+  <div class="section">
+    <h3 onclick="toggleSection('office')">Office</h3>
+    <div class="gallery" id="office">
+      <img src="Office1.png" alt="Office1" onclick="openLightbox(this.src)">
+      <img src="Office2.png" alt="Office2" onclick="openLightbox(this.src)">
+      <img src="Office3.png" alt="Office3" onclick="openLightbox(this.src)">
+      <img src="Office4.png" alt="Office4" onclick="openLightbox(this.src)">
+      <img src="Office5.png" alt="Office5" onclick="openLightbox(this.src)">
+      <img src="Office6.png" alt="Office6" onclick="openLightbox(this.src)">
+      <img src="Office7.png" alt="Office7" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection('village')">Village</h3>
+    <div class="gallery" id="village">
+      <img src="GreenMap1.png" alt="Village1" onclick="openLightbox(this.src)">
+      <img src="GreenMap2.png" alt="Village2" onclick="openLightbox(this.src)">
+      <img src="GreenMap3.png" alt="Village3" onclick="openLightbox(this.src)">
+      <img src="GreenMap4.png" alt="Village4" onclick="openLightbox(this.src)">
+      <img src="GreenMap5.png" alt="Village5" onclick="openLightbox(this.src)">
+    </div>
+  </div>
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <span class="close" onclick="closeLightbox()">&times;</span>
@@ -196,8 +227,8 @@
 
     function filterImages() {
       const input = document.getElementById('searchInput').value.toLowerCase();
-      const galleries = document.querySelectorAll('.gallery img');
-      galleries.forEach(img => {
+      const images = document.querySelectorAll('.gallery img');
+      images.forEach(img => {
         img.style.display = img.alt.toLowerCase().includes(input) ? 'block' : 'none';
       });
     }
