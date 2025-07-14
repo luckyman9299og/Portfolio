@@ -57,20 +57,13 @@
     header h2 {
       font-size: 2rem;
       text-shadow: 0 0 8px #3fd0ff;
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
-    .searchbar {
-      text-align: center;
-      margin: 20px auto 40px;
-    }
-    .searchbar input {
-      padding: 10px 20px;
-      width: 300px;
+    header p {
+      color: #84c9ff;
       font-size: 1rem;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-      box-shadow: none;
+      text-shadow: 0 0 5px #2a95c9;
+      margin-top: 0;
     }
     .section {
       padding: 20px 0;
@@ -166,9 +159,7 @@
 
   <header id="portfolio">
     <h2>Builds:</h2>
-    <div class="searchbar">
-      <input type="text" id="searchInput" placeholder="Search builds..." onkeyup="filterImages()">
-    </div>
+    <p>Click a section below to expand and view the builds.</p>
   </header>
 
   <div class="section">
@@ -241,14 +232,6 @@
 
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
-    }
-
-    function filterImages() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const images = document.querySelectorAll('.gallery img');
-      images.forEach(img => {
-        img.style.display = img.alt.toLowerCase().includes(input) ? 'block' : 'none';
-      });
     }
   </script>
 </body>
