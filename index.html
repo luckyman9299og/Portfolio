@@ -1,263 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luckyman9299's Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #0f1117;
-      color: #d1e8ff;
-    }
-    .hero {
-      background: radial-gradient(circle at center, #1c1f2b 0%, #0f1117 100%);
-      color: #72d0ff;
-      text-align: center;
-      padding: 100px 20px 80px;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 15px;
-      text-shadow: 0 0 10px #3fd0ff;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #a4dfff;
-      max-width: 700px;
-      margin: auto;
-    }
-    .roblox-img {
-      margin-top: 30px;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #3fd0ff;
-      box-shadow: 0 0 10px #3fd0ff50;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .roblox-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #3fd0ff, 0 0 25px #3fd0ff80;
-    }
-    .scroll-button {
-      margin-top: 35px;
-      padding: 14px 30px;
-      font-size: 1rem;
-      background-color: transparent;
-      color: #3fd0ff;
-      border: 2px solid #3fd0ff;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      text-shadow: 0 0 5px #3fd0ff;
-    }
-    .scroll-button:hover {
-      background-color: #3fd0ff10;
-      transform: scale(1.05);
-      box-shadow: 0 0 10px #3fd0ff, 0 0 20px #3fd0ff40;
-    }
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-    }
-    header h2 {
-      font-size: 2rem;
-      text-shadow: 0 0 8px #3fd0ff;
-      margin-bottom: 10px;
-    }
-    header p {
-      color: #84c9ff;
-      font-size: 1rem;
-      text-shadow: 0 0 5px #2a95c9;
-      margin-top: 0;
-    }
-    .section {
-      padding: 20px 0;
-      text-align: center;
-      transition: all 0.4s ease-in-out;
-    }
-    .section h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      cursor: pointer;
-      background-color: #122130;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: 2px solid #3fd0ff;
-      color: #3fd0ff;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 0 10px rgba(63, 208, 255, 0.3);
-    }
-    .section h3:hover {
-      background-color: #1c2f47;
-      transform: scale(1.05);
-    }
-    .gallery {
-      max-height: 0;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      justify-items: center;
-      margin-top: 0;
-      padding: 0 20px;
-      transition: max-height 0.6s ease-in-out, padding 0.3s ease;
-    }
-    .gallery.open {
-      max-height: 2000px;
-      margin-top: 20px;
-      padding-top: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 12px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 15px #3fd0ff;
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(5px);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-    }
-    .lightbox .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #5da9d4;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luckyman9299's Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #0f1117;
+      color: #d1e8ff;
+    }
+    .hero {
+      background: radial-gradient(circle at center, #1c1f2b 0%, #0f1117 100%);
+      color: #72d0ff;
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #3fd0ff;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #a4dfff;
+      max-width: 700px;
+      margin: auto;
+    }
+    .roblox-img {
+      margin-top: 30px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3fd0ff;
+      box-shadow: 0 0 10px #3fd0ff50;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .roblox-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #3fd0ff, 0 0 25px #3fd0ff80;
+    }
+    .scroll-button {
+      margin-top: 35px;
+      padding: 14px 30px;
+      font-size: 1rem;
+      background-color: transparent;
+      color: #3fd0ff;
+      border: 2px solid #3fd0ff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-shadow: 0 0 5px #3fd0ff;
+    }
+    .scroll-button:hover {
+      background-color: #3fd0ff10;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #3fd0ff, 0 0 20px #3fd0ff40;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+    header h2 {
+      font-size: 2rem;
+      text-shadow: 0 0 8px #3fd0ff;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #84c9ff;
+      font-size: 1rem;
+      text-shadow: 0 0 5px #2a95c9;
+      margin-top: 0;
+    }
+    .section {
+      padding: 20px 0;
+      text-align: center;
+      transition: all 0.4s ease-in-out;
+    }
+    .section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-color: #122130;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid #3fd0ff;
+      color: #3fd0ff;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 10px rgba(63, 208, 255, 0.3);
+    }
+    .section h3:hover {
+      background-color: #1c2f47;
+      transform: scale(1.05);
+    }
+    .gallery {
+      max-height: 0;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin-top: 0;
+      padding: 0 20px;
+      transition: max-height 0.6s ease-in-out, padding 0.3s ease;
+    }
+    .gallery.open {
+      max-height: 2000px;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 12px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #3fd0ff;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #5da9d4;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Hi I Build Stuff</h1>
-    <p>From Obbies, to models, studs, low poly, MM2 style buildings, and etc.<br>
-    My main account is <strong>luckyman9299</strong>, but I work on my alt, <strong>luckydude9299</strong>.</p>
+  <div class="hero">
+    <h1>Hi I Build Stuff</h1>
+    <p>From Obbies, to models, studs, low poly, MM2 style buildings, and etc.<br>
+    My main account is <strong>luckyman9299</strong>, but I work on my alt, <strong>luckydude9299</strong>.</p>
 
-    <a href="https://www.roblox.com/users/1098190644/profile" target="_blank">
-      <img src="MYRBLXACC.JPG" alt="joeg Roblox profile" class="roblox-img">
-    </a>
+    <a href="https://www.roblox.com/users/1098190644/profile" target="_blank">
+      <img src="MYRBLXACC.JPG" alt="joeg Roblox profile" class="roblox-img">
+    </a>
 
-    <button class="scroll-button" onclick="document.getElementById('portfolio').scrollIntoView()">View Portfolio</button>
+    <button class="scroll-button" onclick="document.getElementById('portfolio').scrollIntoView()">View Portfolio</button>
+  </div>
+
+  <header id="portfolio">
+    <h2>Builds:</h2>
+    <p>Click a section below to expand and view the builds.</p>
+  </header>
+
+  <div class="section">
+    <h3 onclick="toggleSection('lowpoly')">Low Poly</h3>
+    <div class="gallery" id="lowpoly">
+      <img src="House.png" alt="House" onclick="openLightbox(this.src)">
+      <img src="LowPoly1.jpg" alt="LowPoly1" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection('studs')">Studs</h3>
+    <div class="gallery" id="studs">
+      <div class="section">
+  <h3 onclick="toggleSection('studs')">Studs</h3>
+  <div class="gallery" id="studs">
+    <img src="Stud1.png" alt="Stud1" onclick="openLightbox(this.src)">
+    <img src="Stud2.png" alt="Stud2" onclick="openLightbox(this.src)">
+    <img src="Stud3.png" alt="Stud3" onclick="openLightbox(this.src)">
+    <img src="Stud4.png" alt="Stud4" onclick="openLightbox(this.src)">
+    <img src="Stud5.png" alt="Stud5" onclick="openLightbox(this.src)">
+    <img src="Stud6.png" alt="Stud6" onclick="openLightbox(this.src)">
   </div>
+</div>
 
-  <header id="portfolio">
-    <h2>Builds:</h2>
-    <p>Click a section below to expand and view the builds.</p>
-  </header>
+    </div>
+  </div>
 
-  <div class="section">
-    <h3 onclick="toggleSection('lowpoly')">Low Poly</h3>
-    <div class="gallery" id="lowpoly">
-      <img src="House.png" alt="House" onclick="openLightbox(this.src)">
-      <img src="LowPoly1.jpg" alt="LowPoly1" onclick="openLightbox(this.src)">
-    </div>
-  </div>
+  <div class="section">
+    <h3 onclick="toggleSection('arcade')">Arcade</h3>
+    <div class="gallery" id="arcade">
+      <img src="Arcade1.png" alt="Arcade1" onclick="openLightbox(this.src)">
+      <img src="Arcade2.png" alt="Arcade2" onclick="openLightbox(this.src)">
+      <img src="Arcade3.png" alt="Arcade3" onclick="openLightbox(this.src)">
+      <img src="Arcade4.png" alt="Arcade4" onclick="openLightbox(this.src)">
+      <img src="Arcade5.png" alt="Arcade5" onclick="openLightbox(this.src)">
+      <img src="Arcade6.png" alt="Arcade6" onclick="openLightbox(this.src)">
+      <img src="Arcade7.png" alt="Arcade7" onclick="openLightbox(this.src)">
+      <img src="Arcade8.png" alt="Arcade8" onclick="openLightbox(this.src)">
+      <img src="Arcade9.png" alt="Arcade9" onclick="openLightbox(this.src)">
+    </div>
+  </div>
 
-  <div class="section">
-    <h3 onclick="toggleSection('studs')">Studs</h3>
-    <div class="gallery" id="studs">
-      <img src="Stud1.png" alt="Stud1" onclick="openLightbox(this.src)">
-    </div>
-  </div>
+  <div class="section">
+    <h3 onclick="toggleSection('office')">Office</h3>
+    <div class="gallery" id="office">
+      <img src="Office1.png" alt="Office1" onclick="openLightbox(this.src)">
+      <img src="Office2.png" alt="Office2" onclick="openLightbox(this.src)">
+      <img src="Office3.png" alt="Office3" onclick="openLightbox(this.src)">
+      <img src="Office4.png" alt="Office4" onclick="openLightbox(this.src)">
+      <img src="Office5.png" alt="Office5" onclick="openLightbox(this.src)">
+      <img src="Office6.png" alt="Office6" onclick="openLightbox(this.src)">
+      <img src="Office7.png" alt="Office7" onclick="openLightbox(this.src)">
+    </div>
+  </div>
 
-  <div class="section">
-    <h3 onclick="toggleSection('arcade')">Arcade</h3>
-    <div class="gallery" id="arcade">
-      <img src="Arcade1.png" alt="Arcade1" onclick="openLightbox(this.src)">
-      <img src="Arcade2.png" alt="Arcade2" onclick="openLightbox(this.src)">
-      <img src="Arcade3.png" alt="Arcade3" onclick="openLightbox(this.src)">
-      <img src="Arcade4.png" alt="Arcade4" onclick="openLightbox(this.src)">
-      <img src="Arcade5.png" alt="Arcade5" onclick="openLightbox(this.src)">
-      <img src="Arcade6.png" alt="Arcade6" onclick="openLightbox(this.src)">
-      <img src="Arcade7.png" alt="Arcade7" onclick="openLightbox(this.src)">
-      <img src="Arcade8.png" alt="Arcade8" onclick="openLightbox(this.src)">
-      <img src="Arcade9.png" alt="Arcade9" onclick="openLightbox(this.src)">
-    </div>
-  </div>
+  <div class="section">
+    <h3 onclick="toggleSection('village')">Village</h3>
+    <div class="gallery" id="village">
+      <img src="GreenMap1.png" alt="Village1" onclick="openLightbox(this.src)">
+      <img src="GreenMap2.png" alt="Village2" onclick="openLightbox(this.src)">
+      <img src="GreenMap3.png" alt="Village3" onclick="openLightbox(this.src)">
+      <img src="GreenMap4.png" alt="Village4" onclick="openLightbox(this.src)">
+      <img src="GreenMap5.png" alt="Village5" onclick="openLightbox(this.src)">
+    </div>
+  </div>
 
-  <div class="section">
-    <h3 onclick="toggleSection('office')">Office</h3>
-    <div class="gallery" id="office">
-      <img src="Office1.png" alt="Office1" onclick="openLightbox(this.src)">
-      <img src="Office2.png" alt="Office2" onclick="openLightbox(this.src)">
-      <img src="Office3.png" alt="Office3" onclick="openLightbox(this.src)">
-      <img src="Office4.png" alt="Office4" onclick="openLightbox(this.src)">
-      <img src="Office5.png" alt="Office5" onclick="openLightbox(this.src)">
-      <img src="Office6.png" alt="Office6" onclick="openLightbox(this.src)">
-      <img src="Office7.png" alt="Office7" onclick="openLightbox(this.src)">
-    </div>
-  </div>
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded View">
+  </div>
 
-  <div class="section">
-    <h3 onclick="toggleSection('village')">Village</h3>
-    <div class="gallery" id="village">
-      <img src="GreenMap1.png" alt="Village1" onclick="openLightbox(this.src)">
-      <img src="GreenMap2.png" alt="Village2" onclick="openLightbox(this.src)">
-      <img src="GreenMap3.png" alt="Village3" onclick="openLightbox(this.src)">
-      <img src="GreenMap4.png" alt="Village4" onclick="openLightbox(this.src)">
-      <img src="GreenMap5.png" alt="Village5" onclick="openLightbox(this.src)">
-    </div>
-  </div>
+  <footer>
+    &copy; 2025 Luckyman9299. Portfolio powered by GitHub Pages.
+  </footer>
 
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="" alt="Expanded View">
-  </div>
-
-  <footer>
-    &copy; 2025 Luckyman9299. Portfolio powered by GitHub Pages.
-  </footer>
-
-  <script>
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle("open");
-    }
-    function openLightbox(src) {
-      const lightbox = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      img.src = src;
-      lightbox.style.display = 'flex';
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  </script>
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle("open");
+    }
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lightbox.style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
